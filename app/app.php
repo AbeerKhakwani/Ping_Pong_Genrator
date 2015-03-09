@@ -11,7 +11,10 @@
         return $app['twig']->render('home.php');
     });
     $app->get("/ping_pong_result", function() use ($app) {
-        return $app['twig']->render('result.php');
+
+        $ping_pong_generator = new PingPongGenerator;
+        $result = $ping_pong_generator->generatePingPongArray($_GET['number']);
+        return $app['twig']->render('result.php' , array ("result"=> $result));
     });
     return $app;
 ?>

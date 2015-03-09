@@ -6,7 +6,7 @@
     <body>
     <div class="container">
         <h1>Here's your result:</h1>
-        
+        {{result}}
     </div>
     </body>
 </html>
