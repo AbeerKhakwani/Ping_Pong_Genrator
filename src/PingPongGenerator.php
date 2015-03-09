@@ -5,8 +5,22 @@ class PingPongGenerator
     {   $array_of_numbers=array();
         $count = 1;
         while ($count <= $input_number) {
-            array_push($array_of_numbers, $count);
 
+            if ($count % 3 == 0)
+            {
+            $ping= "ping";
+            array_push($array_of_numbers, $ping);
+            }
+
+            elseif ($count % 5 == 0)
+            {
+            $pong= "pong";
+            array_push($array_of_numbers, $pong);
+            }
+
+            else {
+                array_push($array_of_numbers, $count);
+            }
             $count++;
         }
         return $array_of_numbers;
