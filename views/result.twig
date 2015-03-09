@@ -6,7 +6,10 @@
     <body>
     <div class="container">
         <h1>Here's your result:</h1>
-        {{result}}
+
+    {% for ping in result %}
+    <li>{{ ping }}</li>
+        {% endfor %}
     </div>
     </body>
 </html>
