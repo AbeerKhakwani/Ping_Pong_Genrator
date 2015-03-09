@@ -8,8 +8,10 @@
 
 
     $app->get("/", function() use ($app) {
-        return $app['twig']->render('home.twig');
+        return $app['twig']->render('home.php');
     });
-
+    $app->get("/ping_pong_result", function() use ($app) {
+        return $app['twig']->render('result.php');
+    });
     return $app;
 ?>
